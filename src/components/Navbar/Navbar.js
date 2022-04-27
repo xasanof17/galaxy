@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import {FaBars, FaTimes} from 'react-icons/fa'
 import './Navbar.scss';
 
 const Navbar = () => {
+
+    const [click, setClick] = useState(false)
+    const handleClick = () => setClick(!click)
+
   return (
     <div className='header'>
         <Link to='/'><h1>GLX TRVL</h1></Link>
-        <ul className='header__menu'>
+        <ul className={click ? 'header__menu active' : 'header__menu'}>
             <li>
                 <Link to='/'>Home</Link>
             </li>
@@ -21,8 +25,8 @@ const Navbar = () => {
                 <Link to='/contact'>Contact</Link>
             </li>
         </ul>
-        <div className='hamburger'>
-            <FaBars size={20} style={{color: '#fff'}} />
+        <div className='hamburger' onClick={handleClick}>
+        {click ? (<FaTimes size={20} style={{color: '#fff'}} />) : (<FaBars size={20} style={{color: '#fff'}} />)}
         </div>
     </div>
   )
