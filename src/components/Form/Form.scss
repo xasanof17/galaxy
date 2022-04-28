@@ -1,0 +1,36 @@
+label {
+    color: #eee;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: auto;
+    max-width: 600px;
+    label {
+        margin-bottom: 0.5rem;
+    }
+    input {
+        border-color: transparent;
+    }
+    textarea {
+        border: 2px solid transparent;
+    }
+    input,
+    textarea {
+        margin-bottom: 1rem;
+        padding: 10px 18px;
+        font-size: 1.2rem;
+        font-family: 'Outfit', sans-serif;
+        background: rgba(255,255,255,.1);
+        color: #f4f4f4;
+        transition: 0.5s;
+        outline: none;
+        &:focus-visible {
+            border: 2px solid #fff;
+        }
+        textarea:focus-visible {
+            border: 2px solid #fff;
+        }
+    }
+}

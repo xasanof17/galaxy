@@ -22,8 +22,8 @@ const Footer = () => {
                             marginRight: '2rem'
                         }}/>
                         <div>
-                            <p>123 Acme St.</p>
-                            <h4>Houston, Tx</h4>
+                            <p>Tashkent</p>
+                            <h4>Uzbekistan</h4>
                         </div>
                     </div>
                     <div className='phone'>
